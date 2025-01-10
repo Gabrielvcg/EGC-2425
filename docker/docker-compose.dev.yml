@@ -11,6 +11,8 @@ services:
     build:
       context: ../
       dockerfile: docker/images/Dockerfile.dev
+    enviroment:
+      - FLASK_DEBUG=False
     volumes:
       - ../:/app
       - /var/run/docker.sock:/var/run/docker.sock
